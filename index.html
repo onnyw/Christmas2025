@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Christmas2024</title></head>
+<body style="color: rgb(0, 0, 255); background-image: url(angel_bg.gif);" link="#0000ff" vlink="#800080">
+<strong></strong>
+<script language="JavaScript1.2">
+/*
+Snow Effect Script
+Submitted by Altan d.o.o. (snow@altan.hr, http://www.altan.hr/snow/index.html)
+Permission granted to Dynamicdrive.com to feature script in archive
+For full source code to this script, visit http://dynamicdrive.com
+*/
+//Configure below to change URL path to the snow image
+var snowsrc="snow.gif"
+// Configure below to change number of snow to render
+var no = 10;
+var ns4up = (document.layers) ? 1 : 0; // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var ns6up = (document.getElementById&&!document.all) ? 1 : 0;
+var dx, xp, yp; // coordinate and position variables
+var am, stx, sty; // amplitude and step variables
+var i, doc_width = 800, doc_height = 600;
+if (ns4up||ns6up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+} else if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+for (i = 0; i < no; ++ i) { dx[i] = 0; // set coordinate variables
+xp[i] = Math.random()*(doc_width-50); // set position variables
+yp[i] = Math.random()*doc_height;
+am[i] = Math.random()*20; // set amplitude variables
+stx[i] = 0.02 + Math.random()/10; // set step variables
+sty[i] = 0.7 + Math.random(); // set step variables
+if (ns4up) { // set layers
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><a href=\"http://dynamicdrive.com/\"><img src='"+snowsrc+"' border=\"0\"></a></layer>");
+} else {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src='"+snowsrc+"' border=\"0\"></layer>");
+}
+} else if (ie4up||ns6up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://dynamicdrive.com\"><img src='"+snowsrc+"' border=\"0\"></a></div>");
+} else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"></div>");
+}
+}
+}
+function snowNS() { // Netscape main animation function
+for (i = 0; i < no; ++ i) { // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+dx[i] += stx[i];
+document.layers["dot"+i].top = yp[i];
+document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowNS()", 10);
+}
+function snowIE_NS6() { // IE and NS6 main animation function
+for (i = 0; i < no; ++ i) { // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = ns6up?window.innerWidth : document.body.clientWidth;
+doc_height = ns6up?window.innerHeight : document.body.clientHeight;
+}
+dx[i] += stx[i];
+if (ie4up){
+document.all["dot"+i].style.pixelTop = yp[i];
+document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+}
+else if (ns6up){
+document.getElementById("dot"+i).style.top=yp[i];
+document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i]);
+} }
+setTimeout("snowIE_NS6()", 10);
+}
+if (ns4up) {
+snowNS();
+} else if (ie4up||ns6up) {
+snowIE_NS6();
+}
+</script>
+<p align="center">&nbsp;</p>
+<b><font size="7">
+<p align="center"><font color="#ff0000"><img alt="" src="images1.jpg" style="height: 47px; width: 600px;" border="0" height="47" width="285"> </font> </p>
+<p align="center"><font color="#ff0000">
+Merry Christmas 2024</font> </p>
+</font></b>
+<p align="center"></p>
+<center>
+<table border="0" cellpadding="7" cellspacing="0" width="800">
+<tbody>
+<tr>
+<td valign="center" width="33%">
+<p align="center"><img src="s1.gif" height="117" width="143"></p>
+</td>
+<td valign="center" width="33%">
+<p align="center"><img style="width: 500px; height: 500px;" src="fam.gif" alt=""></p>
+</td>
+<td valign="center" width="33%">
+<p align="center"><img src="navit01-164x150.gif" height="123" width="134"></p>
+</td>
+</tr>
+<tr>
+<td colspan="3" valign="top"><font size="4"><br>
+<p align="center"><font color="#000000" size="6">
+</font><font color="#000000"> </font></p>
+</font></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p></p>
+<p align="center">&nbsp;<img alt="" src="garland-line.gif" style="height: 34px; width: 600px;" border="0" height="77" width="600"></p>
+<p align="center"> </p>
+<p align="center"></p>
+<center>
+<table border="0" cellpadding="7" cellspacing="0" width="800">
+<tbody>
+<tr>
+<td valign="center" width="50%">
+<p>&nbsp;<img style="width: 300px;"  src="bno.gif" alt=""></p>
+</td>
+<td valign="center" width="50%">
+<p align="center"><font color="#008000" size="5">
+Time seemed to be going faster and faster as we grew older! 2024 had been a difficult year because of the repid rise in the cost of living as well as the wars in many parts of the world! Thanksfully, Australia remained fairly peaceful and we thank God for keeping our family safe and provided!
+
+</font></p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p></p>
+<p align="center"></p>
+<p align="center"></p>
+<center>
+<table border="0" cellpadding="7" cellspacing="0" width="635">
+<tbody>
+<tr>
+<td valign="top" width="33%">
+<p align="center"><img src="s8.gif" height="49" width="39"></p>
+</td>
+<td valign="top" width="33%">
+<p align="center"><img src="Xmas004.gif" height="46" width="28"></p>
+</td>
+<td valign="top" width="34%">
+<p align="center"><img src="Xmas005.gif" height="49" width="45"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p></p>
+<p align="center"></p>
+<p align="center">
+</p>
+<center>
+
+<table border="0" cellpadding="7" cellspacing="0" width="800">
+<tbody>
+<tr>
+<td valign="center" width="50%">
+<p align="center"><font color="#800000" size="5">
+<br>
+On continued to work part-time for C&MA and he also volunteered as a religious Instructor once a week in a local primary school. In Nov, he led a team of young people to Papua, Indonesia for a short-term mission trip.  It was a memorable experience to work alongside the C&MA missionaries and to serve the local young people in Indonesia. 
+<br><br>
+
+In Mar, On and Brannie went to Europe for a 18 days holiday. We joined a tour and visited many cities, including Prague, Bratisalva, Vienna, Budapest, Ljubjana, Vience, Palermo, Palma, Barcelona, Marseille, Genoa and Rome. It was wonderful to see so many beautiful cities. The sceneries were beautiful and the weather was good most of the time. The highlight of the trip was the night when we walked around the Colosseum in Rome.
+
+<br>
+</font></p>
+</td>
+<td valign="center" width="28%">
+<p align="center"><img style="height: 300px;" src="on.gif" alt=""></p>
+</td>
+</tr>
+</tbody>
+</table>
+<center>
+<table border="0" cellpadding="7" cellspacing="0" width="800">
+<tbody>
+<tr>
+<td>
+<p align="center"><img alt="" src="lchain.gif" style="height: 43px; width: 600px;" border="0" height="51" width="800"></p>
+<p align="center"><font size="5">
+<br>
+Brannie is now working only part-time as a relief teacher. She also worked a couple of days every week as a volunteer in RSPCA and in a local hospital. She enjoyed spending more time at home and she treasured the many hours of therapeutic sessions with her cats.   In Mar, Brannie went back to Hong Kong to visit family and in Dec, Brannie went to Thailand for a short-term mission trip. 
+
+
+<br>
+<br>
+
+Andre and Ryan also took some times off from their full-time works for their overseas holidays. Andre went to New Zealand in Jun and Ryan went to Japan in Nov. 
+
+</font></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="800">
+<tbody>
+<tr>
+<td valign="center" width="33%">
+<p align="center"><img style="width: 250px;"   src="misc.gif" alt=""></p><p align="center"></p>
+</td>
+<td valign="center" width="33%">
+<p align="center"><img style="width: 250px;"   src="bno.gif" alt=""></p><p align="center"></p>
+</td>
+<td valign="center" width="33%">
+<p align="center"><img style="width: 250px;"   src="br.gif" alt=""></p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<div align="center"></div>
+<div align="center"></div>
+<p align="center">
+</p>
+<p align="center"><img alt="" src="garland-line.gif" style="height: 34px; width: 600px;" border="0" height="77" width="800"></p>
+<p align="center">
+<font color="#ff0000" size="5">
+We thank God for keeping us safe and healthy! 
+<br>We pray that you will find peace and love during this Christmas Season!
+
+<br>
+<br>
+Wish you all a
+Blessed Christmas<br>
+and a Joyful New&nbsp;Year!</font>
+</p>
+<p align="center">
+<a href="mailto:onbrannie@hotmail.com"><img alt="" src="smileface99.gif" height="65" width="56"><font size="5"><strong>On, </strong></font>
+<strong><font color="#ff0000" size="5">Brannie</font><font size="5">, </font>
+<font color="#008000" size="5">Andre </font>
+<font size="5">&amp; Ryan</font> </strong>
+<img alt="Email" src="email12.gif" border="0" height="59" width="100"></a> </p>
+<strong>
+<font size="3">
+<p align="center">Dec 2024</p>
+</font></strong></center>
+</body></html>
